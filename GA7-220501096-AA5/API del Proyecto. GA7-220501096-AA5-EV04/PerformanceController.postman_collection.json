@@ -1,0 +1,143 @@
+{
+	"info": {
+		"_postman_id": "490aeb9d-2695-4dc9-9bfc-14f037e35981",
+		"name": "PerformanceController",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23068793",
+		"_collection_link": "https://www.postman.com/payload-cosmologist-24376217/workspace/prueba/collection/23068793-490aeb9d-2695-4dc9-9bfc-14f037e35981?action=share&creator=23068793&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"nuevo_usuario\",\r\n    \"contrasena\": \"mi_contrasena_segura\",\r\n    \"nombre_oyente\": \"Juan\",\r\n    \"apellido_oyente\": \"Perez\",\r\n    \"email_oyente\": \"juan.perez@example.com\",\r\n    \"pais_oyente\": \"Colombia\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/oyentes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"oyentes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"kathelasmaspro\",\r\n    \"contrasena\": \"nuevacontrasena\",\r\n    \"nombre_oyente\": \"NombreNuevo\",\r\n    \"apellido_oyente\": \"ApellidoNuevo\",\r\n    \"email_oyente\": \"nuevoemail@example.com\",\r\n    \"pais_oyente\": \"NuevoPais\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/oyentes/actualizar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"oyentes",
+						"actualizar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "read/all",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/oyentes/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"oyentes",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "read",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"kathelasmaspro\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/oyentes/buscar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"oyentes",
+						"buscar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/oyentes/eliminar/nuevo_usuario",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"oyentes",
+						"eliminar",
+						"nuevo_usuario"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
